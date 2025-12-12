@@ -1,0 +1,39 @@
+nav {
+  background-color: rgba(184, 217, 255, 0.68);
+  width: auto;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 20%;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  align-items: center;
+
+}
+
+li {
+  display: inline-block;
+  line-height: 90px;  
+}
+
+a {
+  text-decoration: none;
+  color: rgb(25, 5, 126);
+  font-size: large;
+  margin-right: 20px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} 
+a:hover {
+  color: rgb(255, 255, 255);
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(233, 233, 233)
+}
+
+.logo {
+  height: 100px; 
+  width: 100px;
+}
