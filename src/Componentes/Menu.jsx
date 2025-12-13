@@ -1,18 +1,41 @@
 import React from 'react'
-import './Menu.module.css'
+import './Menu.css'
 export default function Menu() {
     return (
         <div>
             <nav className='menu'>
-                    <a href="/">
-                    <img className='logo' src="/public/imagenes/logotalents.png" alt="" />
-                    </a>
+                    
+                    <img className='logo' src="/public/imagenes/logotalents.png" />
                
                     <li>
-                        <a href="/">INICIO</a>
+                        <a href="/">🏠 Home</a>
                     </li>
                     <li>
-                        <a href="/nosotros">NOSOTROS</a>
+                        <a href="/nosotros">👥 Nosotros</a>
+
+                    </li>
+                    <li>
+                        <a href="/deportes">⚽ Deportes</a>
+
+                    </li>
+                     <li>
+                        <a href="/atletas">🏃‍♂️ Atletas</a>
+
+                    </li>
+                     <li>
+                        <a href="/entrenadores">👨‍🏫 Entrenadores</a>
+
+                    </li>
+                     <li>
+                        <a href="/planes">📋 Planes</a>
+
+                    </li>
+                     <li>
+                        <a href="/pruebas">✅ Pruebas</a>
+
+                    </li>
+                     <li>
+                        <a href="/login">🔐 Login</a>
 
                     </li>
             </nav>
