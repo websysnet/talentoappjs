@@ -1,0 +1,165 @@
+.plan-det-section {
+  padding: 24px 3%;
+}
+
+.plan-det-back {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #0b38d8;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.plan-det-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(11,56,216,0.06);
+}
+
+.plan-det-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 12px;
+}
+
+.plan-det-header h1 {
+  margin: 0;
+  color: #0b38d8;
+  font-size: 24px;
+}
+
+.plan-det-estado {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.estado-activo { background: #e8f5e9; color: #2e7d32 }
+.estado-finalizado { background: #e3f2fd; color: #1565c0 }
+.estado-pendiente { background: #fff3e0; color: #e65100 }
+.estado-programado { background: #f3e5f5; color: #6a1b9a }
+
+.plan-det-info {
+  margin-bottom: 18px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.info-item {
+  padding: 10px;
+  background: #f6f8ff;
+  border-radius: 10px;
+}
+
+.info-item strong {
+  display: block;
+  color: #0b38d8;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.info-item p {
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+}
+
+.plan-det-objetivo {
+  margin-bottom: 18px;
+  padding: 12px;
+  background: #f9f9f9;
+  border-left: 4px solid #0b38d8;
+}
+
+.plan-det-objetivo h3 {
+  margin: 0 0 8px 0;
+  color: #0b38d8;
+}
+
+.plan-det-objetivo p {
+  margin: 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+.plan-det-semanas {
+  margin-top: 20px;
+}
+
+.plan-det-semanas h3 {
+  margin: 0 0 12px 0;
+  color: #0b38d8;
+}
+
+.semana-block {
+  margin-bottom: 16px;
+  padding: 12px;
+  background: #f6f8ff;
+  border-radius: 10px;
+}
+
+.semana-block h4 {
+  margin: 0 0 10px 0;
+  color: #0b38d8;
+  font-size: 16px;
+}
+
+.sesiones {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sesion-item {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 3px solid #0b38d8;
+}
+
+.sesion-meta {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.sesion-dia {
+  font-weight: 700;
+  color: #333;
+  font-size: 13px;
+}
+
+.sesion-tipo {
+  background: rgba(11,56,216,0.1);
+  color: #0b38d8;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.sesion-duracion {
+  color: #666;
+  font-size: 12px;
+}
+
+.sesion-desc {
+  margin: 0;
+  color: #555;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+@media (max-width: 720px) {
+  .info-grid { grid-template-columns: 1fr; }
+}
