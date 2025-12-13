@@ -96,6 +96,18 @@
 .menu-user-name { color:white; font-weight:700 }
 .menu-logout { background: transparent; border: none; color: white; cursor: pointer; text-decoration: underline }
 
+.menu-disabled {
+    color: rgba(255,255,255,0.5);
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: inline-block;
+    cursor: not-allowed;
+}
+
+.menu-links li .menu-disabled {
+    display: inline-block;
+}
+
 /* Responsivo para tablets */
 @media (max-width: 768px) {
     .menu {

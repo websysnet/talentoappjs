@@ -9,6 +9,15 @@ export default function Menu() {
     const { user, logout, setShowLogin } = useAuth()
     const { addToast } = useToast()
     const navigate = useNavigate()
+    const items = [
+        { to: '/', label: '🏠 Home' },
+        { to: '/nosotros', label: '👥 Nosotros' },
+        { to: '/deportes', label: '⚽ Deportes' },
+        { to: '/atletas', label: '🏃‍♂️ Atletas' },
+        { to: '/entrenadores', label: '👨‍🏫 Entrenadores' },
+        { to: '/planes', label: '📋 Planes' },
+        { to: '/pruebas', label: '✅ Pruebas' },
+    ]
 
     return (
         <div>
@@ -25,27 +34,16 @@ export default function Menu() {
                 </button>
 
                 <ul className={`menu-links ${open ? 'open' : ''}`}>
-                    <li>
-                        <Link to="/" onClick={() => setOpen(false)}>🏠 Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/nosotros" onClick={() => setOpen(false)}>👥 Nosotros</Link>
-                    </li>
-                    <li>
-                        <Link to="/deportes" onClick={() => setOpen(false)}>⚽ Deportes</Link>
-                    </li>
-                    <li>
-                        <Link to="/atletas" onClick={() => setOpen(false)}>🏃‍♂️ Atletas</Link>
-                    </li>
-                    <li>
-                        <Link to="/entrenadores" onClick={() => setOpen(false)}>👨‍🏫 Entrenadores</Link>
-                    </li>
-                    <li>
-                        <Link to="/planes" onClick={() => setOpen(false)}>📋 Planes</Link>
-                    </li>
-                    <li>
-                        <Link to="/pruebas" onClick={() => setOpen(false)}>✅ Pruebas</Link>
-                    </li>
+                    {items.map(it => (
+                        <li key={it.to}>
+                            {user ? (
+                                <Link to={it.to} onClick={() => setOpen(false)}>{it.label}</Link>
+                            ) : (
+                                <span className="menu-disabled" aria-disabled="true" tabIndex={-1}>{it.label}</span>
+                            )}
+                        </li>
+                    ))}
+
                     <li>
                         {!user ? (
                             <button className="menu-login-btn" onClick={() => { setShowLogin(true); setOpen(false) }}>🔐 Login</button>
