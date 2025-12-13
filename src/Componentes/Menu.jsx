@@ -5,7 +5,7 @@ export default function Menu() {
         <div>
             <nav className='menu'>
                     
-                    <img className='logo' src="/public/imagenes/logotalents.png" />
+                    <img className='logo' src="/imagenes/logotalents.png" alt="Talento Sports" />
                
                     <li>
                         <a href="/">🏠 Home</a>
