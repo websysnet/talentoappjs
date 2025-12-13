@@ -82,6 +82,20 @@
     margin-left: auto;
 }
 
+.menu-login-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.menu-user { display:flex; gap:8px; align-items:center }
+.menu-user-emoji { font-size:18px }
+.menu-user-name { color:white; font-weight:700 }
+.menu-logout { background: transparent; border: none; color: white; cursor: pointer; text-decoration: underline }
+
 /* Responsivo para tablets */
 @media (max-width: 768px) {
     .menu {

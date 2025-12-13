@@ -1,9 +1,14 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useAuth } from '../contexts/AuthContext'
+import { useToast } from '../contexts/ToastContext'
 import './Menu.css'
 
 export default function Menu() {
     const [open, setOpen] = useState(false)
+    const { user, logout, setShowLogin } = useAuth()
+    const { addToast } = useToast()
+    const navigate = useNavigate()
 
     return (
         <div>
@@ -42,7 +47,15 @@ export default function Menu() {
                         <Link to="/pruebas" onClick={() => setOpen(false)}>✅ Pruebas</Link>
                     </li>
                     <li>
-                        <Link to="/login" onClick={() => setOpen(false)}>🔐 Login</Link>
+                        {!user ? (
+                            <button className="menu-login-btn" onClick={() => { setShowLogin(true); setOpen(false) }}>🔐 Login</button>
+                        ) : (
+                            <div className="menu-user">
+                                <span className="menu-user-emoji">{user.emoji}</span>
+                                <span className="menu-user-name">{user.user}</span>
+                                <button className="menu-logout" onClick={() => { logout().then(() => { setOpen(false); navigate('/'); addToast('Sesión cerrada', { type: 'success' }) }) }}>Logout</button>
+                            </div>
+                        )}
                     </li>
                 </ul>
             </nav>
