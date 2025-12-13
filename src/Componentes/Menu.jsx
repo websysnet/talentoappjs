@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Menu.css'
 
 export default function Menu() {
@@ -20,28 +21,28 @@ export default function Menu() {
 
                 <ul className={`menu-links ${open ? 'open' : ''}`}>
                     <li>
-                        <a href="/">🏠 Home</a>
+                        <Link to="/" onClick={() => setOpen(false)}>🏠 Home</Link>
                     </li>
                     <li>
-                        <a href="/nosotros">👥 Nosotros</a>
+                        <Link to="/nosotros" onClick={() => setOpen(false)}>👥 Nosotros</Link>
                     </li>
                     <li>
-                        <a href="/deportes">⚽ Deportes</a>
+                        <Link to="/deportes" onClick={() => setOpen(false)}>⚽ Deportes</Link>
                     </li>
                     <li>
-                        <a href="/atletas">🏃‍♂️ Atletas</a>
+                        <Link to="/atletas" onClick={() => setOpen(false)}>🏃‍♂️ Atletas</Link>
                     </li>
                     <li>
-                        <a href="/entrenadores">👨‍🏫 Entrenadores</a>
+                        <Link to="/entrenadores" onClick={() => setOpen(false)}>👨‍🏫 Entrenadores</Link>
                     </li>
                     <li>
-                        <a href="/planes">📋 Planes</a>
+                        <Link to="/planes" onClick={() => setOpen(false)}>📋 Planes</Link>
                     </li>
                     <li>
-                        <a href="/pruebas">✅ Pruebas</a>
+                        <Link to="/pruebas" onClick={() => setOpen(false)}>✅ Pruebas</Link>
                     </li>
                     <li>
-                        <a href="/login">🔐 Login</a>
+                        <Link to="/login" onClick={() => setOpen(false)}>🔐 Login</Link>
                     </li>
                 </ul>
             </nav>

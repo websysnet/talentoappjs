@@ -1,0 +1,56 @@
+.deporte-det-section {
+  padding: 24px 3%;
+}
+
+.deporte-det-back {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #0b38d8;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.deporte-det-card {
+  display: flex;
+  gap: 20px;
+  background: #fff;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(11,56,216,0.06);
+  align-items: center;
+}
+
+.deporte-det-media {
+  flex: 0 0 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f6f8ff;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.deporte-det-emoji {
+  font-size: 86px;
+  line-height: 1;
+}
+
+.deporte-det-body h1 {
+  margin: 0 0 8px 0;
+  color: #0b38d8;
+}
+
+.deporte-det-tipo {
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.deporte-det-desc {
+  margin: 0;
+  color: #333;
+}
+
+@media (max-width: 720px) {
+  .deporte-det-card { flex-direction: column; }
+  .deporte-det-media { width: 100%; }
+}
