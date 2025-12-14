@@ -7,6 +7,7 @@ import LoginModal from './Componentes/LoginModal'
 import Toasts from './Componentes/Toasts'
 import DeporteDetalle from './Componentes/DeporteDetalle'
 import PlanDetalle from './Componentes/PlanDetalle'
+import Entrenadores from './Componentes/Entrenadores'
 import { Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/deportes/:id" element={<DeporteDetalle />} />
           <Route path="/planes" element={<Planes />} />
           <Route path="/planes/:id" element={<PlanDetalle />} />
+          <Route path="/entrenadores" element={<Entrenadores />} />
         </Routes>
       </main>
 
