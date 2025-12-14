@@ -25,7 +25,7 @@
 }
 
 .deporte-media {
-  flex: 0 0 200px;
+  flex: 0 0 100px;
   background: #f6f8ff;
   display: flex;
   align-items: center;
@@ -40,7 +40,7 @@
 }
 
 .deporte-body {
-  padding: 18px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   gap: 8px;
