@@ -1,8 +1,18 @@
-import deportes from '../data/deportes'
+//import deportes from '../data/deportes'
+var deportes = []
+export async function getDeportes() {
+  try {
+    const res = await fetch('http://localhost:3000/deportes')
+    if (!res.ok) throw new Error(`HTTP error ${res.status}`)
+    const data = await res.json()
+    deportes = data
+    return deportes
 
-export function getDeportes() {
-  // Simular una API: devolver una promesa
-  return Promise.resolve(deportes)
+  } catch (err) {
+    console.warn('getDeportes fetch failed, returning local data:', err)
+    alert('No se pudo conectar al servidor.')
+    return Promise.resolve(deportes)
+  }
 }
 
 export function getDeporteID(id) {

@@ -24,11 +24,11 @@ export default function Deportes() {
         {deportes.map(d => (
           <article className="deporte-card" key={d.id}>
             <div className="deporte-media">
-              <div className="deporte-emoji" role="img" aria-label={d.nombre}>{d.emoji}</div>
+            <div className="deporte-emoji" role="img" aria-label={d.nombre_deporte}>{d.emoji}</div> 
             </div>
             <div className="deporte-body">
-              <h3>{d.nombre}</h3>
-              <p className="deporte-tipo">{d.tipo}</p>
+              <h3>{d.nombre_deporte}</h3>
+              <p className="deporte-tipo">{d.tipo_deporte}</p>
               <p className="deporte-desc">{d.descripcion}</p>
               <Link className="deporte-link" to={`/deportes/${d.id}`}>Ver detalle</Link>
             </div>
